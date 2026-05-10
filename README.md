@@ -1,1 +1,25 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EletroCyre CRM</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; overflow: hidden; }
+    iframe {
+      width: 100%;
+      height: 100vh;
+      border: none;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <iframe
+    src="https://script.google.com/macros/s/AKfycbyCTLvIhoPboLdx0njzSQyXF8hcI0ixEtdadabqvygFtSk9EPzbsQHSRQlOFxspSOak/exec"
+    allow="geolocation; camera; microphone"
+    allowfullscreen>
+  </iframe>
+</body>
+</html>
