@@ -111,14 +111,8 @@
       }
     }
 
-    // Mostra o botão sempre após 3s — assim usuário pode ver as instruções
-    // mesmo quando o Chrome ainda não liberou o prompt automático
-    setTimeout(function() {
-      var btn = document.getElementById('btnInstalar');
-      if (btn && btn.style.display === 'none') {
-        btn.style.display = 'flex';
-      }
-    }, 3000);
+    // Mostra o botão sempre — independente do prompt automático
+    document.getElementById('btnInstalar').style.display = 'flex';
   </script>
 
 </body>
