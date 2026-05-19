@@ -111,8 +111,18 @@
       }
     }
 
-    // Mostra o botão sempre — independente do prompt automático
-    document.getElementById('btnInstalar').style.display = 'flex';
+    // Verifica se já está instalado como PWA — esconde o botão
+    var jaInstalado = window.matchMedia('(display-mode: standalone)').matches
+                   || window.navigator.standalone === true;
+
+    if (!jaInstalado) {
+      document.getElementById('btnInstalar').style.display = 'flex';
+    }
+
+    // Some quando instalar
+    window.matchMedia('(display-mode: standalone)').addEventListener('change', function(e) {
+      if (e.matches) document.getElementById('btnInstalar').style.display = 'none';
+    });
   </script>
 
 </body>
