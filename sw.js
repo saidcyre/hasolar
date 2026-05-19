@@ -1,4 +1,4 @@
-const CACHE = 'electrocyre-v1';
+const CACHE = 'hasolar-v2'; // ← mude o número aqui a cada atualização importante
 
 // Arquivos que ficam disponíveis offline
 const PRECACHE = [
