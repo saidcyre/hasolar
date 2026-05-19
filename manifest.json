@@ -2,8 +2,8 @@
   "name": "EletroCyre — Gestão Solar",
   "short_name": "EletroCyre",
   "description": "Sistema de Gestão Solar",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "https://hasolar.saidcyre.com.br/",
+  "scope": "https://hasolar.saidcyre.com.br/",
   "display": "standalone",
   "orientation": "any",
   "background_color": "#0f1117",
@@ -11,13 +11,13 @@
   "lang": "pt-BR",
   "icons": [
     {
-      "src": "/icons/icon-192.png",
+      "src": "/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icons/icon-512.png",
+      "src": "/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
