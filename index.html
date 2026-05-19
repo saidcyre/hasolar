@@ -111,18 +111,31 @@
       }
     }
 
-    // Verifica se já está instalado como PWA — esconde o botão
+    // Não mostra se já está instalado
     var jaInstalado = window.matchMedia('(display-mode: standalone)').matches
                    || window.navigator.standalone === true;
 
     if (!jaInstalado) {
-      document.getElementById('btnInstalar').style.display = 'flex';
-    }
+      var btn = document.getElementById('btnInstalar');
+      btn.style.display = 'flex';
 
-    // Some quando instalar
-    window.matchMedia('(display-mode: standalone)').addEventListener('change', function(e) {
-      if (e.matches) document.getElementById('btnInstalar').style.display = 'none';
-    });
+      // Some sozinho após 30 segundos
+      var timer = setTimeout(function() {
+        esconderBtn();
+      }, 30000);
+
+      function esconderBtn() {
+        clearTimeout(timer);
+        btn.style.transition = 'opacity 0.5s';
+        btn.style.opacity = '0';
+        setTimeout(function() { btn.style.display = 'none'; }, 500);
+      }
+
+      // Some imediatamente após clicar
+      btn.addEventListener('click', function() {
+        setTimeout(esconderBtn, 500);
+      }, { once: true });
+    }
   </script>
 
 </body>
