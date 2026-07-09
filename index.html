@@ -60,29 +60,6 @@
   allowfullscreen>
 </iframe>
 
-<script>
-  var frame = document.getElementById('appFrame');
-  var carregouConteudo = false;
-
-  frame.addEventListener('load', function() {
-    try {
-      // Se conseguir acessar o conteúdo interno, carregou de verdade
-      if (frame.contentWindow.location.href.indexOf('script.google.com') > -1) {
-        carregouConteudo = true;
-      }
-    } catch (e) {
-      // Erro ao acessar = provavelmente carregou o app normalmente (cross-origin esperado)
-      carregouConteudo = true;
-    }
-  });
-
-  setTimeout(function() {
-    if (!carregouConteudo) {
-      window.location.href = "https://script.google.com/macros/s/AKfycbyMD0bYPTvfnnW2PPzDKq1kzrCxO0eVwgCv_yTi5fKYHl7K6FOa4oCinbr1ybRYFt57/exec";
-    }
-  }, 3000);
-</script>
-
 
   <!-- Botão instalar PWA (aparece automaticamente quando o browser libera) -->
   <button id="btnInstalar" onclick="instalarPWA()">
